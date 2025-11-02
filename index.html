@@ -12,57 +12,55 @@
 </head>
 <body>
     <!-- ゲーム全体を包むコンテナ -->
-    <div id="gameContainer">
-        <!-- ゲームを描画するキャンバス（エアホッケーのコート） -->
-        <canvas id="gameCanvas"></canvas>
+        <div id="gameContainer">
+            <canvas id="gameCanvas"></canvas>
 
-        <!-- ゲーム情報やメッセージを表示するUIエリア -->
+    <!-- 数字だけのUI -->
         <div id="ui">
-            <!-- ゲーム開始や結果などのメッセージを表示 -->
-            <h1 id="message">GAME START‼️</h1>
-
-            <!-- 時間・レベル・ランクなどのステータス表示 -->
             <p id="info">
                 Time: <span id="time">0</span>s |
                 Lv: <span id="level">1</span> |
                 Rank: <span id="rank">D</span>
             </p>
-
-                <!-- 🔽 リザルト表示エリア -->
-            <div id="resultBox">
-                <h2 id="resultMessage"></h2>
-                <p id="resultDetail"></p>
-                <button id="restartBtn">もういちどあそぶ</button>
-            </div>
-
-            <!-- 🏁 スタート画面 -->
-            <div id="startScreen">
-                <h1 id="title">AIR HOCKEY<br>VERTICAL</h1>
-                <div class="title-line"></div>
-                <button id="startBtn">START</button>
-            </div>
-
-                <!-- メニューボタン（枠外右上） -->
-            <button id="menuBtn" aria-label="Menu" title="Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-        <!-- メニューパネル -->
-            <nav id="menuPanel" aria-hidden="true">
-                <button id="menuClose" aria-label="Close menu">✕</button>
-                <ul>
-                    <li><button class="menuItem" id="resumeBtn">▶つづきから</button></li>
-                    <li><button class="menuItem" id="restartBtnMenu">🔁さいしょから</button></li>
-                    <li><button class="menuItem" id="soundToggle">🔊音：オン </button></li>
-                </ul>
-            </nav>
-
         </div>
+
+    <!-- メッセージは数字UIとは別 -->
+        <h1 id="message">GAME START‼️</h1>
+
+    <!-- リザルト画面 -->
+        <div id="resultBox">
+            <h2 id="resultMessage"></h2>
+            <p id="resultDetail"></p>
+            <button id="restartBtn">もういちどあそぶ</button>
+        </div>
+
+    <!-- スタート画面 -->
+        <div id="startScreen">
+            <h1 id="title">AIR HOCKEY<br>VERTICAL</h1>
+            <div class="title-line"></div>
+            <button id="startBtn">START</button>
+        </div>
+
+    <!-- メニューボタン -->
+        <button id="menuBtn" aria-label="Menu" title="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+    <!-- メニューパネル -->
+        <nav id="menuPanel" aria-hidden="true">
+            <button id="menuClose" aria-label="Close menu">✕</button>
+            <ul>
+                <li><button class="menuItem" id="resumeBtn">▶つづきから</button></li>
+                <li><button class="menuItem" id="restartBtnMenu">🔁さいしょから</button></li>
+                <li><button class="menuItem" id="soundToggle">🔊音：オン</button></li>
+            </ul>
+        </nav>
     </div>
 
+
     <!-- JavaScriptファイルを読み込み（ゲームの動作制御） -->
-    <script src="script.js"></script>
+    <script src="script-2.js"></script>
 </body>
 </html>

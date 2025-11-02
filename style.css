@@ -38,8 +38,10 @@ UI全体の設定
 --------------------------------*/
 #ui {
     position: absolute;
-    top: 10px;
+    top: 300px;
+    left: 50%;
     width: 100%;
+    transform: translateX(-50%);
     text-align: center;
 }
 
@@ -64,8 +66,11 @@ UI全体の設定
 情報表示部分（スコアなど）
 --------------------------------*/
 #info {
-    margin-top: 500px;
+    display: flex;             /* 横並び */
+    gap: 15px;                 /* 各要素の間隔 */
+    justify-content: center;   /* 親要素の中央に寄せる */
     font-size: 1.2rem;
+    pointer-events: none;      /* マウス操作の邪魔をしない */
 }
 
 /* -------------------------------
@@ -74,10 +79,10 @@ UI全体の設定
 #resultBox {
     display: none; /* 最初は非表示 */
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(55, 55, 60, 0.63); /* 半透明の黒背景 */
+    background: rgba(55, 55, 60, 0.952); /* 半透明の黒背景 */
     border: 2px solid #0ff;
     border-radius: 12px;
     padding: 30px 50px;
@@ -129,8 +134,8 @@ UI全体の設定
 --------------------------------*/
 #startScreen {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 100%;
+    left: 100%;
     background: linear-gradient(180deg, #002244 0%, #000a18 100%);
     color: #0ff;
     z-index: 100;
@@ -175,7 +180,7 @@ UI全体の設定
 #menuBtn {
     position: absolute;
     /* 枠（gameContainer）から外側にはみ出す */
-    top: -15px;
+    top: 10px;
     right: -70px;
     width: 56px;
     height: 56px;
