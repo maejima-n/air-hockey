@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- 文字コードをUTF-8に設定（日本語など多言語に対応） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- スマホなどの画面サイズに対応する設定 -->
+    <title>Air Hockey Vertical</title>
+    <!-- ページタイトル（タブに表示される名前） -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 外部CSSファイル（見た目の設定）を読み込み -->
+</head>
+<body>
+    <!-- ゲーム全体を包むコンテナ -->
+        <div id="gameContainer">
+            <canvas id="gameCanvas"></canvas>
+
+    <!-- 数字だけのUI -->
+        <div id="ui">
+            <p id="info">
+                Time: <span id="time">0</span>s |
+                Lv: <span id="level">1</span> |
+                Rank: <span id="rank">D</span>
+            </p>
+        </div>
+
+    <!-- メッセージは数字UIとは別 -->
+        <h1 id="message">GAME START‼️</h1>
+
+    <!-- リザルト画面 -->
+        <div id="resultBox">
+            <h2 id="resultMessage"></h2>
+            <p id="resultDetail"></p>
+            <button id="restartBtn">もういちどあそぶ</button>
+        </div>
+
+    <!-- スタート画面 -->
+        <div id="startScreen">
+            <h1 id="title">AIR HOCKEY<br>VERTICAL</h1>
+            <div class="title-line"></div>
+            <button id="startBtn">START</button>
+        </div>
+
+    <!-- メニューボタン -->
+        <button id="menuBtn" aria-label="Menu" title="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+    <!-- メニューパネル -->
+        <nav id="menuPanel" aria-hidden="true">
+            <button id="menuClose" aria-label="Close menu">✕</button>
+            <ul>
+                <li><button class="menuItem" id="resumeBtn">▶つづきから</button></li>
+                <li><button class="menuItem" id="restartBtnMenu">🔁さいしょから</button></li>
+                <li><button class="menuItem" id="soundToggle">🔊音：オン</button></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- JavaScriptファイルを読み込み（ゲームの動作制御） -->
+    <script src="script-2.js"></script>
+</body>
+</html>
